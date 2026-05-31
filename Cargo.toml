@@ -5,7 +5,7 @@ edition = "2024"
 categories = ["no-std"]
 description = "This crate provides the ability to define constants and their corresponding macros using literals."
 exclude = ["Justfile"]
-keywords = ["const", "constant", "declarative", "declarative-macro", "macro", "literal"]
+keywords = ["const", "constant", "declarative", "macro", "literal"]
 license = "MIT"
 repository = "https://github.com/okkmnone/your_literals"
 
