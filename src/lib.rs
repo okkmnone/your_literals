@@ -21,10 +21,16 @@
 //!     #define QUX: u8 => b'q',
 //!     #define QUUX: u128 => 0xFFFF_FFFF_FFFF_FFFF_FFFF_FFFF_FFFF_FFFF,
 //! });
+//!
+//! assert_eq!(FOO, foo!());
+//! assert_eq!(BAR, bar!());
+//! assert_eq!(BAZ, baz!());
+//! assert_eq!(QUX, qux!());
+//! assert_eq!(QUUX, quux!());
 //! ```
 //!
 //! ## Limitations
-//! Only literals can be used.
+//! Only literals are supported.
 
 #[doc(no_inline)]
 pub use paste;
