@@ -1,6 +1,6 @@
 [package]
 name = "your_literals"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 categories = ["no-std"]
 description = "This crate provides the ability to define constants and their corresponding macros using literals."

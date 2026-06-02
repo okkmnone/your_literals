@@ -3,7 +3,7 @@ mod konsts {
 
     c_style!(export pub(crate) constants => {
         #define BAZ: &str => "baz",
-        #define QUX: u8 => 200,
+        #define QUX: u8 => 0xFF,
     });
 }
 

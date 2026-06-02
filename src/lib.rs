@@ -19,9 +19,12 @@
 //!     #define BAR: &[u8; 3] => b"bar",
 //!     #define BAZ: char => 'b',
 //!     #define QUX: u8 => b'q',
-//!     #define QUUX: i8 => -128,
+//!     #define QUUX: u128 => 0xFFFF_FFFF_FFFF_FFFF_FFFF_FFFF_FFFF_FFFF,
 //! });
 //! ```
+//!
+//! ## Limitations
+//! Only literals can be used.
 
 #[doc(no_inline)]
 pub use paste;
@@ -41,7 +44,10 @@ pub use paste;
 ///
 /// assert_eq!(FOO, foo!());
 /// assert_eq!(BAR, bar!());
-/// assert_eq!(FOO_BAR, concat!("let ", concat!(foo!(), "_", bar!()), ' ', stringify!(= 99;)));
+///
+/// let expected = concat!("let ", concat!(foo!(), "_", bar!()), ' ', stringify!(= 99;));
+/// assert_eq!(FOO_BAR, expected);
+/// assert_eq!(FOO_BAR, foo_bar!());
 ///
 /// assert_eq!(CORGE, corge!());
 /// assert_eq!(GRAULT, grault!());
